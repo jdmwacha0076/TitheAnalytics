@@ -97,14 +97,17 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="mx-auto"> <!-- Center the navigation items -->
             <ul class="navbar-nav">
-            <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="./home.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./admin/add_member.php">Add Members</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">View Members</a>
+                    <a class="nav-link" href="./admin/view_members.php">View Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./admin/record_tithe.php">Record Tithe</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Send Message</a>
@@ -113,43 +116,13 @@
         </div>
     </nav>
 
-    <div class="slideshow-container">
-        <div class="mySlides">
-            <img src="../assets/image11.jpg" alt="Slide 1">
-        </div>
-        <div class="mySlides">
-            <img src="./image1.jpg" alt="Slide 2">
-        </div>
-    </div>
+        <!--Reneder Body -->
 
-    <footer>
+    <!-- <footer>
         <p>&copy; 2023 Jimbo Kuu la Dar-es-Salaam</p>
-    </footer>
+    </footer> -->
 
-    <!-- Add Bootstrap JS and Popper.js scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        // JavaScript for image slideshow
-        var slideIndex = 0;
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
-        }
-
-        // Initial call to start the slideshow
-        showSlides();
-    </script>
 </body>
 
 </html>
+
