@@ -21,7 +21,7 @@
             $servername = "localhost";
             $username = "root";
             $db_password = ""; // Change this to your database password
-            $dbname = "epvatefortune";
+            $dbname = "parokiayamwenge";
 
             $conn = new mysqli($servername, $username, $db_password, $dbname);
 
