@@ -1,14 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Login</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add FontAwesome CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #fffbf2; /* Pale yellow background */
+            background-image: url('your-background-image.jpg'); /* Replace 'your-background-image.jpg' with your image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            color: #333; /* Text color */
+        }
+
+        .container {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.95); /* Adjust the alpha channel for the background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 3em; /* Adjust the font size as needed */
+            margin-bottom: 20px;
+            color: #e07c00; /* Icon color */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border: 2px solid #e07c00; /* Input border color */
+            border-radius: 5px; /* Input border radius */
+            padding: 10px; /* Input padding */
+        }
+
+        label {
+            color: #333; /* Label color */
+            text-align: left; /* Align labels to the left */
+            display: block; /* Ensure labels appear on a new line */
+            margin-bottom: 5px; /* Add spacing between labels and inputs */
+        }
+
+        .btn-primary {
+            background-color: #e07c00; /* Button background color */
+            border-color: #e07c00; /* Button border color */
+            padding: 12px; /* Increase button padding */
+            border-radius: 5px; /* Button border radius */
+        }
+
+        .btn-primary:hover {
+            background-color: #cc6600; /* Button hover background color */
+            border-color: #cc6600;
+        }
+
+        .signup-link {
+            font-size: 14px;
+            color: #cc6600; 
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font to h2 */
+            font-weight: 700; /* Set font weight to bold */
+            color: #333; /* Heading color */
+            margin-bottom: 20px; /* Add spacing below the heading */
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <h2 class="text-center">Create an Account</h2>
+        <div class="icon">
+            <i class="fas fa-church"></i>
+        </div>
+        <h2 class="text-center mb-4">Create an Account</h2>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email = $_POST["email"];
@@ -21,7 +100,7 @@
             $servername = "localhost";
             $username = "root";
             $db_password = ""; // Change this to your database password
-            $dbname = "database";
+            $dbname = "parokiayamwenge";
 
             $conn = new mysqli($servername, $username, $db_password, $dbname);
 
@@ -29,7 +108,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+            $sql = "INSERT INTO admin (email, password) VALUES (?, ?)";
 
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ss", $email, $hashed_password);
@@ -46,21 +125,25 @@
         ?>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password">Password:</label>
                 <input type="password" id="password" name="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <p class="text-center mt-4">
+                <a href="index.php" class="signup-link">Already have an account </a> | <a href="#" class="signup-link">Forgot Password</a>
+            </p>
         </form>
-        <p class="text-center mt-3">
-            <a href="index.php">Log In</a> | <a href="forgot_password.php">Forgot Password</a>
-        </p>
     </div>
+
+    <!-- Add Bootstrap JS and Popper.js scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
+
