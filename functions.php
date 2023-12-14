@@ -1,5 +1,6 @@
 <?php
-function createMembersTable() {
+function createMembersTable()
+{
     global $conn;
 
     $sql = "CREATE TABLE IF NOT EXISTS members (
@@ -12,7 +13,8 @@ function createMembersTable() {
     return $conn->query($sql);
 }
 
-function insertMember($name, $jumuiya) {
+function insertMember($name, $jumuiya)
+{
     global $conn;
 
     $sql = "INSERT INTO members (name, jumuiya_id) VALUES ('$name', $jumuiya)";
@@ -20,14 +22,14 @@ function insertMember($name, $jumuiya) {
     return $conn->query($sql);
 }
 
-
-function AddMembers($firstName, $lastName, $phoneNumber, $jumuiya_name) {
+function AddMembers($firstName, $lastName, $phoneNumber, $jumuiya_name)
+{
     global $conn;
-    
+
     $firstName = mysqli_real_escape_string($conn, $firstName);
     $lastName = mysqli_real_escape_string($conn, $lastName);
     $phoneNumber = mysqli_real_escape_string($conn, $phoneNumber);
-    $jumuiya = mysqli_real_escape_string($conn, $jumuiya_name);
+    $jumuiya_name = mysqli_real_escape_string($conn, $jumuiya_name);
 
     $sql = "INSERT INTO all_members (firstName, lastName, phoneNumber, jumuiya_name) VALUES ('$firstName', '$lastName', '$phoneNumber', '$jumuiya_name')";
 
