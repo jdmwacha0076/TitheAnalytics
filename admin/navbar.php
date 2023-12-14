@@ -4,81 +4,8 @@
     <title>Jimbo Kuu la Dar-es-Salaam</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fffbf2;
-            /* Pale yellow background */
-        }
-
-        header {
-            background-color: #f8d400;
-            /* Yellow header background */
-            color: #333;
-            padding: 10px;
-            text-align: center;
-            position: relative;
-        }
-
-        .church-icons {
-            font-size: 4.5em;
-            /* Increased font size for the icons */
-            color: #333;
-            /* Dark color for icons */
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .church-icons.left {
-            left: 10px;
-        }
-
-        .church-icons.right {
-            right: 10px;
-        }
-
-        nav {
-            background-color: #f8f9fa;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: #007bff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .slideshow-container {
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        footer {
-            background-color: #f8d400;
-            /* Yellow footer background */
-            color: #333;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link href="../assets/logo2.png" rel="icon">
+    <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body>
@@ -89,7 +16,7 @@
         </div>
         <h1 style="font-family: 'Arial', sans-serif; font-weight: bold;">Jimbo Kuu la Dar-es-Salaam</h1>
         <div class="church-icons right">
-            <i class="fas fa-church"></i>
+            <img src="../assets/tithecollect.png" alt="An Icon for Tithe Collection" class="custom-image">
         </div>
         <h3>Parokia ya Mtakatifu Maxmillian Maria Kolbe.</h3>
     </header>
