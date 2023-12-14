@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jimbo Kuu la Dar-es-Salaam</title>
-    <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Add FontAwesome CSS link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fffbf2; /* Pale yellow background */
+            background-color: #fffbf2;
+            /* Pale yellow background */
         }
 
         header {
-            background-color: #f8d400; /* Yellow header background */
+            background-color: #f8d400;
+            /* Yellow header background */
             color: #333;
             padding: 10px;
             text-align: center;
@@ -26,8 +23,10 @@
         }
 
         .church-icons {
-            font-size: 4.5em; /* Increased font size for the icons */
-            color: #333; /* Dark color for icons */
+            font-size: 4.5em;
+            /* Increased font size for the icons */
+            color: #333;
+            /* Dark color for icons */
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -70,7 +69,8 @@
         }
 
         footer {
-            background-color: #f8d400; /* Yellow footer background */
+            background-color: #f8d400;
+            /* Yellow footer background */
             color: #333;
             text-align: center;
             padding: 10px;
@@ -95,34 +95,25 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="mx-auto"> <!-- Center the navigation items -->
+        <div class="mx-auto">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./home.php">Home</a>
+                    <a class="nav-link" href="../home.php">Nyumbani</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin/add_member.php">Add Members</a>
+                    <a class="nav-link" href="add_member.php">Sajili Mtoa Zaka</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin/view_members.php">View Members</a>
+                    <a class="nav-link" href="view_members.php">Tizama Watoa Zaka</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin/record_tithe.php">Record Tithe</a>
+                    <a class="nav-link" href="record_tithe.php">Rekodi Zaka</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Send Message</a>
+                    <a class="nav-link" href="send_message.php">Tuma Jumbe za Zaka</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-        <!--Reneder Body -->
-
-    <!-- <footer>
-        <p>&copy; 2023 Jimbo Kuu la Dar-es-Salaam</p>
-    </footer> -->
-
 </body>
-
-</html>
-

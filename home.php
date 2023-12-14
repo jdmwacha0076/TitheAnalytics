@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jimbo Kuu la Dar-es-Salaam</title>
-    <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Add FontAwesome CSS link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fffbf2; /* Pale yellow background */
+            background-color: #fffbf2;
+            /* Pale yellow background */
         }
 
         header {
-            background-color: #f8d400; /* Yellow header background */
+            background-color: #f8d400;
+            /* Yellow header background */
             color: #333;
             padding: 10px;
             text-align: center;
@@ -26,8 +26,10 @@
         }
 
         .church-icons {
-            font-size: 4.5em; /* Increased font size for the icons */
-            color: #333; /* Dark color for icons */
+            font-size: 4.5em;
+            /* Increased font size for the icons */
+            color: #333;
+            /* Dark color for icons */
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -70,7 +72,8 @@
         }
 
         footer {
-            background-color: #f8d400; /* Yellow footer background */
+            background-color: #f8d400;
+            /* Yellow footer background */
             color: #333;
             text-align: center;
             padding: 10px;
@@ -82,7 +85,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="church-icons left">
             <i class="fas fa-church"></i>
@@ -95,19 +97,22 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="mx-auto"> <!-- Center the navigation items -->
+        <div class="mx-auto">
             <ul class="navbar-nav">
-            <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="./home.php">Nyumbani</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin/add_member.php">Add Members</a>
+                    <a class="nav-link" href="./admin/add_member.php">Sajili Mtoa Zaka</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">View Members</a>
+                    <a class="nav-link" href="./admin/view_members.php">Tizama Watoa Zaka</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Send Message</a>
+                    <a class="nav-link" href="./admin/record_tithe.php">Rekodi Zaka</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./admin/send_message.php">Tuma Jumbe za Zaka</a>
                 </li>
             </ul>
         </div>
@@ -126,13 +131,9 @@
         <p>&copy; 2023 Jimbo Kuu la Dar-es-Salaam</p>
     </footer>
 
-    <!-- Add Bootstrap JS and Popper.js scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!--JavaScript for image slideshow-->
     <script>
-        // JavaScript for image slideshow
         var slideIndex = 0;
 
         function showSlides() {
@@ -142,14 +143,15 @@
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+            setTimeout(showSlides, 2000);
         }
-
-        // Initial call to start the slideshow
         showSlides();
     </script>
+
 </body>
 
 </html>
