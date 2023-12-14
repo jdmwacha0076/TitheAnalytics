@@ -1,0 +1,301 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffbf2;
+}
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 15px;
+}
+
+header {
+    background-color: #f8d400;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.church-icons {
+    font-size: 4em;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.church-icons.left {
+    left: 10px;
+    padding-left: 4%;
+}
+
+.church-icons.right {
+    right: 10px;
+    padding-right: 4%;
+}
+
+.custom-image {
+    width: 100px; 
+    height: auto; 
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #007bff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #f8d400;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f8d400;
+    color: #333;
+}
+
+tr {
+    height: 40px; 
+}
+
+.register-icon {
+    font-size: 1em;
+    color: #333;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.send-icon {
+    font-size: 2em;
+    color: #333;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.card {
+    padding: 2%;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group small {
+    color: #888;
+}
+
+.custom-heading {
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+    padding-bottom: 1%;
+}
+
+.btn-primary {
+    background-color: #e07c00;
+    border-color: #e07c00;
+    width: 10%;
+}
+
+.btns-primary {
+    background-color: #e07c00;
+    border-color: #e07c00;
+}
+
+
+.btns-primary:hover {
+    background-color: #cc6600;
+    border-color: #cc6600;
+}
+
+.success-message {
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card {
+    padding: 2%;
+}
+
+.custom-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.custom-heading {
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+    padding-bottom: 1%;
+}
+
+.filter-control {
+    background-color: #e07c00;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    border: none;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.filter-control {
+    background-color: #e07c00;
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.card {
+    padding: 2%;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group small {
+    color: #888;
+}
+
+.register-icon {
+    font-size: 1em;
+    color: #333;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.custom-heading {
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+    padding-bottom: 1%;
+    /* Add some margin for spacing */
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.register-icons {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #f8d400;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}

@@ -34,135 +34,7 @@ $result = $conn->query($sql);
 <head>
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <script>
-        function filterTable() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("search");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("memberTable");
-            tr = table.getElementsByTagName("tr");
-
-            for (i = 0; tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-
-        function showTitheContributionForm(memberId) {
-            var titheContributionForm = document.getElementById("titheContributionForm");
-            titheContributionForm.style.display = "block";
-            document.getElementById("selectedMemberId").value = memberId;
-        }
-
-        function hideTitheContributionForm() {
-            var titheContributionForm = document.getElementById("titheContributionForm");
-            titheContributionForm.style.display = "none";
-        }
-    </script>
-
-    <style>
-        /* Add your styles here */
-        .success-message {
-            color: #155724;
-            background-color: #d4edda;
-            border: 1px solid #c3e6cb;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-
-        .error-message {
-            color: #721c24;
-            background-color: #f8d7da;
-            border: 1px solid #f5c6cb;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-
-
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fffbf2;
-            /* Pale yellow background */
-        }
-
-        .container {
-            max-width: 1500px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            margin-top: 15px;
-        }
-
-        .card {
-            padding: 2%;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #ddd;
-        }
-
-        th,
-        td {
-            padding: 12px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f8d400;
-            /* Yellow header background */
-            color: #333;
-        }
-
-        .form-group label {
-            font-weight: bold;
-            color: #333;
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .form-group small {
-            color: #888;
-        }
-
-        .register-icon {
-            font-size: 1em;
-            color: #333;
-            margin-right: 10px;
-            display: inline-block;
-            font-weight: bold;
-        }
-
-        .custom-heading {
-            font-weight: bold;
-            display: inline-block;
-            margin-left: 10px;
-            padding-bottom: 1%;
-            /* Add some margin for spacing */
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body>
@@ -224,7 +96,7 @@ $result = $conn->query($sql);
                         </div>
                         <br>
                         <button type="button" class="btn btn-secondary" onclick="hideTitheContributionForm()"><i class="fas fa-times"></i> Cancel</button>
-                        <button type="submit" name="saveTitheContribution" class="btn btn-primary"><i class="fas fa-save"></i> Save Tithe Contribution</button>
+                        <button type="submit" name="saveTitheContribution" class="btn btns-primary"><i class="fas fa-save"></i> Save Tithe Contribution</button>
                     </form>
                 </div>
             </div>
@@ -243,3 +115,37 @@ $result = $conn->query($sql);
     </div>
 
 </body>
+
+<!--Script to show the form to enter amount -->
+<script>
+    function filterTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("memberTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    function showTitheContributionForm(memberId) {
+        var titheContributionForm = document.getElementById("titheContributionForm");
+        titheContributionForm.style.display = "block";
+        document.getElementById("selectedMemberId").value = memberId;
+    }
+
+    function hideTitheContributionForm() {
+        var titheContributionForm = document.getElementById("titheContributionForm");
+        titheContributionForm.style.display = "none";
+    }
+</script>

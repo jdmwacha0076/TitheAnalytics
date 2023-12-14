@@ -15,119 +15,7 @@ include '../functions.php';
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fffbf2;
-            /* Pale yellow background */
-        }
-
-        .container {
-            max-width: 1500px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            margin-top: 5px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 0px;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #ddd;
-        }
-
-        th,
-        td {
-            padding: 12px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f8d400;
-            /* Yellow header background */
-            color: #333;
-        }
-
-        .icon {
-            font-size: 2em;
-            /* Adjust the font size as needed */
-            display: inline-block;
-        }
-
-
-        .btn-primary {
-            background-color: #e07c00;
-            /* Button background color */
-            border-color: #e07c00;
-            /* Button border color */
-            width: 100%;
-            /* Make button width 100% of the container */
-        }
-
-
-        .btn-primary:hover {
-            background-color: #cc6600;
-            /* Button hover background color */
-            border-color: #cc6600;
-        }
-
-        .success-message {
-            color: #28a745;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .card {
-            padding: 2%;
-        }
-
-        .custom-label {
-            font-weight: bold;
-            margin-bottom: 5px;
-            /* Add some margin for spacing */
-            display: block;
-        }
-
-        .custom-heading {
-            font-weight: bold;
-            display: inline-block;
-            margin-left: 10px;
-            padding-bottom: 1%;
-            /* Add some margin for spacing */
-        }
-
-        .filter-control {
-            background-color: #e07c00;
-            /* Set the button background color to yellow */
-            color: #ffffff;
-            /* Set the text color to black or your preferred color */
-            transition: background-color 0.3s ease;
-            /* Add a transition effect for fading */
-            border: none;
-            /* Remove button border for a cleaner look */
-            padding: 5px 10px;
-            width: 100%;
-            /* Adjust padding as needed */
-        }
-
-        .filter-control {
-            background-color: #e07c00;
-            /* Set the button background color to a faded yellow on hover */
-        }
-    </style>
-
+    <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <script>
@@ -194,7 +82,7 @@ include '../functions.php';
         <div class="card">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="icon" style="display: inline-block; margin-right: 10px;">
+                    <div class="send-icon" style="display: inline-block; margin-right: 10px;">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h2 class="d-inline-block custom-heading"> Send Message</h2>
@@ -274,7 +162,7 @@ include '../functions.php';
             </div>
         </div>
     </div>
-    
+
 </body>
 
 <?php

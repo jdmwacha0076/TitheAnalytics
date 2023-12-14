@@ -7,78 +7,8 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-        body {
-            background-color: #fffbf2;
-            background-image: url('your-background-image.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-        }
-        .container {
-            max-width: 700px;
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #e07c00;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-control {
-            border: 2px solid #e07c00;
-            border-radius: 5px;
-            padding: 10px;
-        }
-        label {
-            color: #333;
-            text-align: left;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .btn-primary {
-            background-color: #e07c00;
-            /* Button background color */
-            border-color: #e07c00;
-            /* Button border color */
-            padding: 12px;
-            /* Increase button padding */
-            border-radius: 5px;
-            /* Button border radius */
-        }
-        .btn-primary:hover {
-            background-color: #cc6600;
-            /* Button hover background color */
-            border-color: #cc6600;
-        }
-        .signup-link {
-            font-size: 14px;
-            color: #cc6600;
-        }
-        h2 {
-            font-family: 'Roboto', sans-serif;
-            /* Apply Roboto font to h2 */
-            font-weight: 700;
-            /* Set font weight to bold */
-            color: #333;
-            /* Heading color */
-            margin-bottom: 20px;
-            /* Add spacing below the heading */
-        }
-    </style>
+    <link href="./assets/logo2.png" rel="icon">
+    <link rel="stylesheet" href="./assets/loginstyles.css">
 </head>
 
 <body>

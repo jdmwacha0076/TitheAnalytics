@@ -11,88 +11,11 @@ include '../functions.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
-
     <!-- DataTables CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fffbf2;
-            /* Pale yellow background */
-        }
-
-        .container {
-            max-width: 1600px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-            margin-top: 15px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #ddd;
-        }
-
-        th,
-        td {
-            padding: 12px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f8d400;
-            /* Yellow header background */
-            color: #333;
-        }
-
-
-        .register-icon {
-            font-size: 1em;
-            color: #333;
-            margin-right: 10px;
-            display: inline-block;
-            font-weight: bold;
-        }
-
-        .card {
-            padding: 2%;
-        }
-
-        .form-group label {
-            font-weight: bold;
-            color: #333;
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .form-group small {
-            color: #888;
-        }
-
-        .custom-heading {
-            font-weight: bold;
-            display: inline-block;
-            margin-left: 10px;
-            padding-bottom: 1%;
-            /* Add some margin for spacing */
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body>
@@ -123,7 +46,6 @@ include '../functions.php';
                 </thead>
                 <tbody>
                     <?php
-
                     $sql = "SELECT all_members.*, jumuiya.name AS jumuiya_name
                 FROM all_members
                 JOIN jumuiya ON all_members.jumuiya_name = jumuiya.id";
