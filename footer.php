@@ -41,7 +41,7 @@
 
 <footer>
     <div>
-        <p>Version 1.0.0 | Developed by BOB Solutions</p>
+        <p>Toleo la 1.0.1 | Developed by BOB Solutions</p>
         <!-- <p>Version 1.0.0 | Developed by<a href="#">BOB Solutions</a></p> -->
     </div>
     <div>

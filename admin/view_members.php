@@ -7,7 +7,6 @@ include '../functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Members</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
@@ -24,12 +23,12 @@ include '../functions.php';
         <div class="card">
             <div class="row search-box">
                 <div class="col-md-8">
-                    <h2><i class="fas fa-search register-icon"></i><span class="custom-heading">Registered Members</span></h2>
+                    <h2><i class="fas fa-search register-icon"></i><span class="custom-heading">Watoa Zaka Walio Sajiliwa</span></h2>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="search">Search by ID:</label>
-                        <input type="text" id="search" class="form-control" oninput="filterTable()" placeholder="Enter ID">
+                        <label for="search">Tafuta kwa Namba ya Kadi:</label>
+                        <input type="text" id="search" class="form-control" oninput="filterTable()" placeholder="Andika Namba ya Kadi Hapa">
                     </div>
                 </div>
             </div>
@@ -37,11 +36,11 @@ include '../functions.php';
             <table id="memberTable" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Phone Number</th>
-                        <th>Jumuiya Name</th>
+                        <th>No:</th>
+                        <th>Jina la Kwanza</th>
+                        <th>Jina la Mwisho</th>
+                        <th>Nambari ya Simu</th>
+                        <th>Jina la Jumuiya</th>
                     </tr>
                 </thead>
                 <tbody>

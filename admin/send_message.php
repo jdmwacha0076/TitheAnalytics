@@ -8,7 +8,6 @@ include '../functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Member</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css">
@@ -85,22 +84,22 @@ include '../functions.php';
                     <div class="send-icon" style="display: inline-block; margin-right: 10px;">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h2 class="d-inline-block custom-heading"> Send Message</h2>
+                    <h2 class="d-inline-block custom-heading"> Tuma Ujumbe kwa Mtoa Zaka</h2>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-5 mb-4">
-                    <label for="startDate" class="form-label custom-label">Start Date:</label>
+                    <label for="startDate" class="form-label custom-label">Tarehe ya Kuanza:</label>
                     <input type="date" class="form-control" id="startDate">
                 </div>
                 <div class="col-md-5 mb-4">
-                    <label for="endDate" class="form-label custom-label">End Date:</label>
+                    <label for="endDate" class="form-label custom-label">Tarehe ya Mwisho:</label>
                     <input type="date" class="form-control" id="endDate">
                 </div>
                 <div class="col-md-2 mb-4">
                     <label for="endDate" class="form-label"> &nbsp; </label>
-                    <input type="button" class="form-control" style="background-color:#e07c00; color:white" id="filterBtn" value="Filter">
+                    <input type="button" class="form-control" style="background-color:#e07c00; color:white" id="filterBtn" value="Chuja Taarifa">
                 </div>
             </div>
 
@@ -118,14 +117,14 @@ include '../functions.php';
                     <table class="table table-bordered table-striped" id="tithetable">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Name</th>
+                                <th>No:</th>
+                                <th>Jina</th>
                                 <th>Jumuiya</th>
-                                <th>Amount</th>
-                                <th>Phone Number</th>
-                                <th>Date Created</th>
-                                <th>Action</th>
-                                <th>Status</th>
+                                <th>Kiasi</th>
+                                <th>Nambari ya Simu</th>
+                                <th>Tarehe Iliyosajiliwa</th>
+                                <th>Kitendo</th>
+                                <th>Hali</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -145,7 +144,7 @@ include '../functions.php';
                                     . '\'' . $row['firstName'] . '\', '
                                     . '\'' . $row['jumuiya_name'] . '\', '
                                     . '\'' . date('F', strtotime($row['recored_datetime'])) . '\''
-                                    . ')">Send SMS</button></td>';
+                                    . ')">Tuma</button></td>';
                                 echo '<td class="text-center">';
                                 if ($row['flag_value'] == 1) {
                                     echo '<i class="fas fa-check"></i>';
@@ -169,7 +168,9 @@ include '../functions.php';
             </div>
         </div>
     </div>
+
     <?php include '../footer.php'; ?>
+
 </body>
 
 <?php

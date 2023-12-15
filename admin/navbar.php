@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimbo Kuu la Dar-es-Salaam</title>
+    <title>Mfumo wa Taarifa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="../assets/logo2.png" rel="icon">
@@ -14,11 +14,11 @@
         <div class="church-icons left">
             <i class="fas fa-church"></i>
         </div>
-        <h1 style="font-family: 'Arial', sans-serif; font-weight: bold;">Jimbo Kuu la Dar-es-Salaam</h1>
+        <h1 style="font-family: 'Arial', sans-serif; font-weight: bold;"> Jimbo Kuu la (Jina la Jimbo) </h1>
         <div class="church-icons right">
             <img src="../assets/tithecollect.png" alt="An Icon for Tithe Collection" class="custom-image">
         </div>
-        <h3>Parokia ya Mtakatifu Maxmillian Maria Kolbe.</h3>
+        <h3> Parokia ya (Sehemu ya Jina la Parokia) </h3>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light">

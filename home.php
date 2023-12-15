@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimbo Kuu la Dar-es-Salaam</title>
+    <title>Mfumo wa Taarifa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="./assets/logo2.png" rel="icon">
@@ -16,11 +16,11 @@
         <div class="church-icons left">
             <i class="fas fa-church"></i>
         </div>
-        <h1 style="font-family: 'Arial', sans-serif; font-weight: bold;">Jimbo Kuu la Dar-es-Salaam</h1>
+        <h1 style="font-family: 'Arial', sans-serif; font-weight: bold;"> Jimbo Kuu la (Jina la Jimbo)</h1>
         <div class="church-icons right">
             <img src="./assets/tithecollect.png" alt="Slide 1" class="custom-image">
         </div>
-        <h3>Parokia ya Mtakatifu Maxmillian Maria Kolbe.</h3>
+        <h3> Parokia ya (Sehemu ya Jina la Parokia) </h3>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -30,7 +30,7 @@
                     <a class="nav-link" href="./home.php">Nyumbani</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin/add_member.php">Sajili Mtoa Zaka</a>
+                    <a class="nav-link" href="./admin/add_member.php">Sajili Mtoa Zaka </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./admin/view_members.php">Tizama Watoa Zaka</a>
@@ -49,20 +49,23 @@
 
         <div class="mySlides">
             <div class="image-overlay">
-                <h2>"Honor the Lord with your wealth, with the firstfruits
-                    of all your crops; then your barns will be filled to overflowing,
-                    and your vats will brim over with new wine." Proverbs 3:9-13</h2>
+                <h2>"Mheshimu Bwana kwa mali yako, na kwa malimbuko ya mazao yako yote.
+                     Ndipo ghala zako zitakapojazwa kwa wingi, na mashinikizo yako yatafurika 
+                     divai mpya. Mwanangu, usidharau maonyo ya Bwana, wala usichukizwe na adhabu yake. 
+                     Kwa maana Bwana ampendaye humrekebisha, kama vile baba ampendaye mwana wake. 
+                     Heri mtu yule apataye hekima, na mtu yule apataye ufahamu." Mithali 3:9-13</h2>
             </div>
             <img src="./assets/slide3.jpg" alt="Slide 1">
         </div>
 
         <div class="mySlides">
             <div class="image-overlay">
-                <h2>Bring the whole tithe into the storehouse,
-                    that there may be food in my house. Test me in this,”
-                    says the Lord Almighty, “and see if I will not throw open
-                    the floodgates of heaven and pour out so much blessing that
-                    there will not be room enough to store it." Malachi 3:10-12 </h2>
+                <h2>"Mlete mzima zaka ghalani, ili kuwapo chakula katika nyumba yangu;
+                     jipimeni sasa kwa hayo, asema Bwana wa majeshi, mimi sitawafungulia
+                      ninyi madirisha ya mbinguni, wala sitawamwagieni baraka, hata isiwepo 
+                      nafasi ya kutosha ya kuziweka. Nami nitamkemea yule mla nyama kwa ajili 
+                      yenu, wala hataharibu mazao ya ardhi yenu; wala mzabibu wenu hautaachwa
+                       kuzaa matunda yake kabla ya wakati wake, asema Bwana wa majeshi." Malaki 3:10-12 </h2>
             </div>
             <img src="./assets/slide1.jpg" alt="Slide 2">
         </div>

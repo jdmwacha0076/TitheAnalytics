@@ -22,8 +22,8 @@
         }
 
         .icon {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 7em;
+            margin-bottom: 5px;
             color: #e07c00;
         }
 
@@ -66,4 +66,25 @@
             font-weight: 700;
             color: #333;
             margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .btns-primary {
+            background-color: #e07c00;
+            border-color: #e07c00;
+            color: #fff;
+            padding: 2%;
+        }
+        
+        .btns-primary:hover {
+            background-color: #cc6600;
+            border-color: #cc6600;
+            color: #fff;
         }

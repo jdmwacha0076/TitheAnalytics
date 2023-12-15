@@ -290,6 +290,8 @@ tr {
 .image-overlay h2 {
     font-size: 1.5em;
     margin: 0;
+    color:  #ffffff;
+    line-height: 150%;
 }
 
 .info {
