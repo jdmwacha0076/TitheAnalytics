@@ -64,7 +64,6 @@ function getJumuiyaByKandaId($kandaId)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Member</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -87,31 +86,31 @@ function getJumuiyaByKandaId($kandaId)
             <?php if (isset($success)) { ?>
                 <?php if ($success) { ?>
                     <div class="alert alert-success" role="alert">
-                        Member added successfully
+                        Amesajiliwa Kikamilifu
                     </div>
                 <?php } else { ?>
                     <div class="alert alert-danger" role="alert">
-                        Error adding member
+                        Hajasajiliwa Kikamilifu
                     </div>
                 <?php } ?>
             <?php } ?>
 
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div class="form-group">
-                    <label for="firstName">First Name:</label>
+                    <label for="firstName">Jina la Kwanza:</label>
                     <input type="text" id="firstName" name="firstName" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="lastName">Last Name:</label>
+                    <label for="lastName">Jina la Mwisho:</label>
                     <input type="text" id="lastName" name="lastName" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="phoneNumber">Phone Number: </label>
+                    <label for="phoneNumber">Nambari ya Simu: </label>
                     <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" title="Enter a valid phone number (e.g., 0123456789)" oninput="transformPhoneNumber(this)" required>
-                    <small class="form-text text-muted">Format: 0xxxxxxxxx</small>
+                    <small class="form-text text-muted">Umbizo: 0xxxxxxxxx</small>
                 </div>
                 <div class="form-group">
-                    <label for="kanda">Select Kanda:</label>
+                    <label for="kanda">Chagua Kanda:</label>
                     <select id="kanda" name="kanda" class="form-control">
 
                         <?php
@@ -125,14 +124,14 @@ function getJumuiyaByKandaId($kandaId)
 
                     </select> <br>
 
-                    <label for="jumuiya_name">Select Jumuiya:</label>
+                    <label for="jumuiya_name">Chagua Jumuiya:</label>
                     <select id="jumuiya_name" name="jumuiya_name" class="form-control">
 
                     </select>
 
                 </div>
 
-                <button type="submit" class="btn btns-primary">Add Member</button>
+                <button type="submit" class="btn btns-primary">Kamilisha Usajili</button>
             </form>
         </div>
     </div>

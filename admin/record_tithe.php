@@ -32,7 +32,6 @@ $result = $conn->query($sql);
 <?php include 'navbar.php'; ?>
 
 <head>
-    <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -42,10 +41,10 @@ $result = $conn->query($sql);
         <div class="card">
             <div class="row search-box">
                 <div class="col-md-12">
-                    <h2><i class="fas fa-search register-icon"></i><span class="custom-heading">Search and Record Tithe Contribution</span></h2>
+                    <h2><i class="fas fa-search register-icon"></i><span class="custom-heading">Tafuta na Rekodi Zaka</span></h2>
                     <div class="form-group">
-                        <label for="search">Search by ID:</label>
-                        <input type="text" id="search" class="form-control" oninput="filterTable()" placeholder="Enter ID">
+                        <label for="search">Tafuta kwa Namba ya Kadi:</label>
+                        <input type="text" id="search" class="form-control" oninput="filterTable()" placeholder="Andika Namba ya Kadi Hapa">
                     </div>
                 </div>
             </div>
@@ -53,12 +52,12 @@ $result = $conn->query($sql);
             <table id="memberTable" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Phone Number</th>
-                        <th>Jumuiya Name</th>
-                        <th>Actions</th>
+                        <th>No:</th>
+                        <th>Jina la Kwanza</th>
+                        <th>Jina la Mwisho</th>
+                        <th>Nambari ya Simu</th>
+                        <th>Jina la Jumuiya</th>
+                        <th>Chagua</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -71,7 +70,7 @@ $result = $conn->query($sql);
                             echo '<td>' . $row['lastName'] . '</td>';
                             echo '<td>' . $row['phoneNumber'] . '</td>';
                             echo '<td>' . $row['jumuiya_name'] . '</td>';
-                            echo '<td><button class="btn btn-success" onclick="showTitheContributionForm(' . $row['member_id'] . ')"><i class="fas fa-coins"></i> Record Tithe</button></td>';
+                            echo '<td><button class="btn btn-success" onclick="showTitheContributionForm(' . $row['member_id'] . ')"><i class="fas fa-coins"></i> Rekodi Taarifa</button></td>';
                             echo '</tr>';
                         }
                     } else {
@@ -84,10 +83,10 @@ $result = $conn->query($sql);
             <!-- Tithe Contribution Form Popup -->
             <div id="titheContributionForm" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 20px; border-radius: 5px;">
-                    <h3>Record Tithe Contribution</h3>
+                    <h3>Rekodi Taarifa za Zaka</h3>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                         <input type="hidden" id="selectedMemberId" name="selectedMemberId" value="">
-                        <label for="amount">Amount:</label>
+                        <label for="amount">Kiasi:</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="amount-addon">Tsh</span>
@@ -95,8 +94,8 @@ $result = $conn->query($sql);
                             <input type="text" id="amount" name="amount" class="form-control" required>
                         </div>
                         <br>
-                        <button type="button" class="btn btn-secondary" onclick="hideTitheContributionForm()"><i class="fas fa-times"></i> Cancel</button>
-                        <button type="submit" name="saveTitheContribution" class="btn btns-primary"><i class="fas fa-save"></i> Save Tithe Contribution</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideTitheContributionForm()"><i class="fas fa-times"></i> Ghairi</button>
+                        <button type="submit" name="saveTitheContribution" class="btn btns-primary"><i class="fas fa-save"></i> Kamilisha Rekodi ya Taarifa</button>
                     </form>
                 </div>
             </div>
