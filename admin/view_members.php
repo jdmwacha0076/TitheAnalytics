@@ -47,7 +47,7 @@ include '../functions.php';
                     <?php
                     $sql = "SELECT all_members.*, jumuiya.name AS jumuiya_name
                 FROM all_members
-                JOIN jumuiya ON all_members.jumuiya_name = jumuiya.id";
+                JOIN jumuiya ON all_members.jumuiya_name = jumuiya.id order by member_id desc";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
