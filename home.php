@@ -46,22 +46,60 @@
     </nav>
 
     <div class="slideshow-container">
+
         <div class="mySlides">
-            <img src="../assets/image11.jpg" alt="Slide 1">
+            <div class="image-overlay">
+                <h2>"Honor the Lord with your wealth, with the firstfruits
+                    of all your crops; then your barns will be filled to overflowing,
+                    and your vats will brim over with new wine." Proverbs 3:9-13</h2>
+            </div>
+            <img src="./assets/slide3.jpg" alt="Slide 1">
         </div>
+
         <div class="mySlides">
-            <img src="./image1.jpg" alt="Slide 2">
+            <div class="image-overlay">
+                <h2>Bring the whole tithe into the storehouse,
+                    that there may be food in my house. Test me in this,”
+                    says the Lord Almighty, “and see if I will not throw open
+                    the floodgates of heaven and pour out so much blessing that
+                    there will not be room enough to store it." Malachi 3:10-12 </h2>
+            </div>
+            <img src="./assets/slide1.jpg" alt="Slide 2">
         </div>
     </div>
 
-    <footer>
-        <div class="footer-center">
-            <p>Developed by BOB</p>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="alert alert-info info">
+                    <div class="info-body">
+                        <h5 class="info-title">Getting Started</h5>
+                        <p class="info-text">Follow these steps to get started with the system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="alert alert-info info">
+                    <div class="info-body">
+                        <h5 class="info-title">Data Entry</h5>
+                        <p class="info-text">Learn how to enter and manage data in the system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="alert alert-info info">
+                    <div class="info-body">
+                        <h5 class="info-title">Reports and Analytics</h5>
+                        <p class="info-text">Explore the reporting features and analytics tools available.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-center">
-            <p>Zaka Kamili kwa Maendeleo</p>
-        </div>
-    </footer>
+    </div> -->
+
+    <?php include 'footer.php'; ?>
 
 </body>
 
@@ -69,20 +107,34 @@
 
 <!--JavaScript for image slideshow-->
 <script>
-    var slideIndex = 0;
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-    function showSlides() {
+    // Set interval to change slides every 2 seconds
+    setInterval(function() {
+        plusSlides(1);
+    }, 2000);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
+
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2000);
     }
-    showSlides();
 </script>

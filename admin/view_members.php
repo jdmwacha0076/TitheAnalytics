@@ -100,11 +100,13 @@ include '../functions.php';
                 'searching': false,
                 'ordering': false,
                 'info': true,
-                'autoWidth': false
+                'autoWidth': false,
+                'pageLength': 20,
+                'lengthMenu': [20, 50, 100]
             });
         });
     </script>
-
+    <?php include '../footer.php'; ?>
 </body>
 
 </html>

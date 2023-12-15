@@ -5,6 +5,14 @@ body {
     background-color: #fffbf2;
 }
 
+.body2 {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffbf2;
+    display: flex;
+}
+
 .container {
     max-width: 1600px;
     margin: auto;
@@ -42,8 +50,8 @@ header {
 }
 
 .custom-image {
-    width: 100px; 
-    height: auto; 
+    width: 100px;
+    height: auto;
 }
 
 nav {
@@ -74,16 +82,6 @@ img {
     height: auto;
 }
 
-footer {
-    background-color: #f8d400;
-    color: #333;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -108,7 +106,7 @@ th {
 }
 
 tr {
-    height: 40px; 
+    height: 40px;
 }
 
 .register-icon {
@@ -125,10 +123,6 @@ tr {
     margin-right: 10px;
     display: inline-block;
     font-weight: bold;
-}
-
-.card {
-    padding: 2%;
 }
 
 .form-group label {
@@ -150,21 +144,17 @@ tr {
     padding-bottom: 1%;
 }
 
-.btn-primary {
-    background-color: #e07c00;
-    border-color: #e07c00;
-    width: 10%;
-}
-
 .btns-primary {
     background-color: #e07c00;
     border-color: #e07c00;
+    color: #fff;
 }
 
 
 .btns-primary:hover {
     background-color: #cc6600;
     border-color: #cc6600;
+    color: #fff;
 }
 
 .success-message {
@@ -222,10 +212,6 @@ tr {
     border-radius: 5px;
 }
 
-.card {
-    padding: 2%;
-}
-
 .form-group label {
     font-weight: bold;
     color: #333;
@@ -277,25 +263,52 @@ tr {
     font-weight: bold;
 }
 
-footer {
-    background-color: #f8d400;
-    color: #000000;
-    text-align: center;
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.image-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
-.footer-left,
-.footer-right {
-    flex: 1;
+.image-overlay h2 {
+    font-size: 1.5em;
+    margin: 0;
 }
 
-.footer-left {
-    text-align: left;
+.info {
+    margin-bottom: 20px;
 }
 
-.footer-right {
-    text-align: right;
+.info:hover {
+    transform: scale(1.05);
+}
+
+.info-body {
+    text-align: center;
+}
+
+.info-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.info-text {
+    color: #555;
 }

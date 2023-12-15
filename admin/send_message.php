@@ -19,10 +19,10 @@ include '../functions.php';
 </head>
 
 <script>
-    function sendSMS(phoneNumber, amount) {
+    function sendSMS(phoneNumber, amount, member_id, firstName, jumuiya, recored_datetime) {
         var api_key = '6d77e575c33bf1c2';
         var secret_key = 'MGJmNjcwMzczMDFjNDY5ZDg2Yzc5YTcxZDVlOTEzYzY0MzI3YTI3MDZkZmQyMjI4ODJiZTNkMjY5ZWNhMzc1Yw==';
-        var message = 'Hello, we have received a contribution equals to Tsh' + amount;
+        var message = 'Tumsifu Yesu Kristo. \nNdugu ' + firstName + ' mwenye namba ya kadi ' + member_id + ', kutoka ' + jumuiya + '.\n\nParokia ya Mwenge imepokea zako ya mwezi ' + recored_datetime + ' kiasi cha shilingi ' + amount + '.\n\nUongozi wa Parkia unakushukuru kwa majitoleo yako.';
         var postData = {
             'source_addr': 'INFO',
             'encoding': 0,
@@ -137,8 +137,15 @@ include '../functions.php';
                                 echo '<td>' . $row['jumuiya_name'] . '</td>';
                                 echo '<td>' . $row['amount'] . '</td>';
                                 echo '<td>' . $row['phoneNumber'] . '</td>';
-                                echo '<td>' . date('Y-m-d', strtotime($row['recored_datetime'])) . '</td>';
-                                echo '<td><button class="filter-control" onclick="sendSMS(\'' . $row['phoneNumber'] . '\', ' . $row['amount'] . ')">Send SMS</button></td>';
+                                echo '<td>' . date('Y-M-d', strtotime($row['recored_datetime'])) . '</td>';
+                                echo '<td><button class="filter-control" onclick="sendSMS('
+                                    . '\'' . $row['phoneNumber'] . '\', '
+                                    . $row['amount'] . ', '
+                                    . '\'' . $row['member_id'] . '\', '
+                                    . '\'' . $row['firstName'] . '\', '
+                                    . '\'' . $row['jumuiya_name'] . '\', '
+                                    . '\'' . date('F', strtotime($row['recored_datetime'])) . '\''
+                                    . ')">Send SMS</button></td>';
                                 echo '<td class="text-center">';
                                 if ($row['flag_value'] == 1) {
                                     echo '<i class="fas fa-check"></i>';
@@ -162,7 +169,7 @@ include '../functions.php';
             </div>
         </div>
     </div>
-
+    <?php include '../footer.php'; ?>
 </body>
 
 <?php
@@ -201,7 +208,9 @@ $conn->close();
             'searching': false,
             'ordering': false,
             'info': true,
-            'autoWidth': false
+            'autoWidth': false,
+            'pageLength': 20,
+            'lengthMenu': [20, 50, 100]
         });
     });
 </script>

@@ -37,7 +37,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body>
+<body class="body2">
     <div class="container">
         <div class="card">
             <div class="row search-box">
@@ -113,6 +113,7 @@ $result = $conn->query($sql);
 
         </div>
     </div>
+    <?php include '../footer.php'; ?>
 
 </body>
 
