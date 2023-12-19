@@ -21,7 +21,7 @@ include '../functions.php';
     function sendSMS(phoneNumber, amount, member_id, firstName, jumuiya, recored_datetime) {
         var api_key = '6d77e575c33bf1c2';
         var secret_key = 'MGJmNjcwMzczMDFjNDY5ZDg2Yzc5YTcxZDVlOTEzYzY0MzI3YTI3MDZkZmQyMjI4ODJiZTNkMjY5ZWNhMzc1Yw==';
-        var message = 'Tumsifu Yesu Kristo. \nNdugu ' + firstName + ' mwenye namba ya kadi ' + member_id + ', kutoka ' + jumuiya + '.\n\nParokia ya Mwenge imepokea zako ya mwezi ' + recored_datetime + ' kiasi cha shilingi ' + amount + '.\n\nUongozi wa Parkia unakushukuru kwa majitoleo yako.';
+        var message = 'Tumsifu Yesu Kristo. \nNdugu ' + firstName + ' mwenye namba ya kadi ' + member_id + ', kutoka ' + jumuiya + '.\n\nParokia ya (Jina la Parokia) imepokea zaka yako ya mwezi ' + recored_datetime + ' kiasi cha shilingi ' + amount + '.\n\nUongozi wa Parkia unakushukuru kwa majitoleo yako.';
         var postData = {
             'source_addr': 'INFO',
             'encoding': 0,
@@ -43,7 +43,7 @@ include '../functions.php';
             data: JSON.stringify(postData),
             success: function(response) {
                 console.log(response);
-                alert('SMS sent successfully to ' + phoneNumber);
+                alert('Ujumbe umetumwa kikamilifu kwenda kwa nambari ' + phoneNumber);
                 if (response.status === 'success') {
                     updateFlagInDatabase(phoneNumber, 1);
                 } else {
@@ -52,7 +52,7 @@ include '../functions.php';
             },
             error: function(error) {
                 console.error(error);
-                alert('Failed to send SMS to ' + phoneNumber);
+                alert('Mfumo umeshindwa kutuma ujumbe kwenda kwenye nambari ya simu ' + phoneNumber+ '\nTafadhali hakikisha kuwa una mtandao na salio la kutosha.');
                 updateFlagInDatabase(phoneNumber, 2);
             }
         });
@@ -76,7 +76,7 @@ include '../functions.php';
     }
 </script>
 
-<body>
+<body class="body2">
     <div class="container">
         <div class="card">
             <div class="row">
@@ -109,7 +109,7 @@ include '../functions.php';
                 $sql = "SELECT a.member_id, a.firstName, a.phoneNumber, t.recored_datetime, t.flag_value, j.name AS jumuiya_name, t.amount
             FROM all_members a
             JOIN tithe_collection t ON a.member_id = t.member_id
-            JOIN jumuiya j ON a.jumuiya_name = j.id";
+            JOIN jumuiya j ON a.jumuiya_name = j.id order by member_id desc";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {

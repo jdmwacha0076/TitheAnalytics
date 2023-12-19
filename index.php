@@ -43,7 +43,7 @@
                     $hashed_password = $row["password"];
 
                     if (password_verify($password, $hashed_password)) {
-                        header('Location: admin/home.php');
+                        header('Location: home.php');
                         exit;
                     } else {
                         echo '<div class="alert alert-danger" role="alert">Incorrect email or password. Please try again.</div>';

@@ -13,9 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO tithe_collection (member_id, recored_datetime, amount) VALUES ('$memberId', NOW(), '$amount')";
 
             if ($conn->query($sql) === TRUE) {
-                $successMessage = "Tithe contribution recorded successfully.";
+                $successMessage = "Taarifa Imerokidwa na Kuhifadhiwa Kikamilifu.";
             } else {
-                $errorMessage = "Error recording tithe contribution: " . $conn->error;
+                $errorMessage = "Taarifa Haijarekodiwa wala kuhifadhiwa: " . $conn->error;
             }
         } else {
             $errorMessage = "Invalid input. Please enter a valid member ID and amount.";

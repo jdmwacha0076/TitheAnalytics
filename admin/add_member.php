@@ -47,7 +47,7 @@ function getJumuiyaByKandaId($kandaId)
 {
     global $conn;
 
-    $sql = "SELECT id, name FROM jumuiyas WHERE kanda_id = $kandaId";
+    $sql = "SELECT id, name FROM jumuiya WHERE kanda_id = $kandaId";
     $result = $conn->query($sql);
 
     $jumuiyaData = [];
