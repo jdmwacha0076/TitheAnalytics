@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Mfumo wa Taarifa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="./assets/logo2.png" rel="icon">
+    <link rel="stylesheet" href="./assets/loginstyles.css">
 </head>
+
 <body>
     <div class="container">
-        <h2 class="text-center">Create an Account</h2>
+        <div class="icon">
+            <i class="fas fa-church"></i>
+        </div>
+        <h2 class="text-center mb-4">Tengeneza Akaunti</h2>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email = $_POST["email"];
-            $password = $_POST["password"]; // Plain text password
-
-            // Hash the password
+            $password = $_POST["password"];
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-            // Database connection parameters
             $servername = "localhost";
             $username = "root";
-            $db_password = ""; // Change this to your database password
-            $dbname = "epvatefortune";
+            $db_password = "";
+            $dbname = "parokiayamwenge";
 
             $conn = new mysqli($servername, $username, $db_password, $dbname);
 
@@ -29,7 +33,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+            $sql = "INSERT INTO admin (email, password) VALUES (?, ?)";
 
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ss", $email, $hashed_password);
@@ -46,21 +50,20 @@
         ?>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" class="form-control" required>
+                <label for="email">Ingiza Barua Pepe:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="user@gmail.com" required>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password">Neno Siri:</label>
                 <input type="password" id="password" name="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            <button type="submit" class="btn btns-primary btn-block">Kusanya Taarifa</button>
+            <p class="text-center mt-4">
+                <a href="index.php" class="signup-link">Tayari Nina Akaunti </a> | <a href="#" class="signup-link">Umesahau Password?</a>
+            </p>
         </form>
-        <p class="text-center mt-3">
-            <a href="index.php">Log In</a> | <a href="forgot_password.php">Forgot Password</a>
-        </p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

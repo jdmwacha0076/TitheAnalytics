@@ -1,0 +1,90 @@
+        body {
+            background-color: #fffbf2;
+            background-image: url('image_url_where_necessary');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .container {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 7em;
+            margin-bottom: 5px;
+            color: #e07c00;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border: 2px solid #e07c00;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        label {
+            color: #333;
+            text-align: left;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .btn-primary {
+            background-color: #e07c00;
+            border-color: #e07c00;
+            padding: 12px;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #cc6600;
+            border-color: #cc6600;
+        }
+
+        .signup-link {
+            font-size: 14px;
+            color: #cc6600;
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .btns-primary {
+            background-color: #e07c00;
+            border-color: #e07c00;
+            color: #fff;
+            padding: 2%;
+        }
+        
+        .btns-primary:hover {
+            background-color: #cc6600;
+            border-color: #cc6600;
+            color: #fff;
+        }
