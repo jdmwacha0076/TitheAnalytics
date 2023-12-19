@@ -21,7 +21,7 @@ include '../functions.php';
     function sendSMS(phoneNumber, amount, member_id, firstName, jumuiya, recored_datetime) {
         var api_key = '6d77e575c33bf1c2';
         var secret_key = 'MGJmNjcwMzczMDFjNDY5ZDg2Yzc5YTcxZDVlOTEzYzY0MzI3YTI3MDZkZmQyMjI4ODJiZTNkMjY5ZWNhMzc1Yw==';
-        var message = 'Tumsifu Yesu Kristo. \nNdugu ' + firstName + ' mwenye namba ya kadi ' + member_id + ', kutoka ' + jumuiya + '.\n\nParokia ya Mwenge imepokea zako yako ya mwezi ' + recored_datetime + ' kiasi cha shilingi ' + amount + '.\n\nUongozi wa Parkia unakushukuru kwa majitoleo yako.';
+        var message = 'Tumsifu Yesu Kristo. \nNdugu ' + firstName + ' mwenye namba ya kadi ' + member_id + ', kutoka ' + jumuiya + '.\n\nParokia ya (Jina la Parokia) imepokea zaka yako ya mwezi ' + recored_datetime + ' kiasi cha shilingi ' + amount + '.\n\nUongozi wa Parkia unakushukuru kwa majitoleo yako.';
         var postData = {
             'source_addr': 'INFO',
             'encoding': 0,
