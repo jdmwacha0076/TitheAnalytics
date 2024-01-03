@@ -70,7 +70,7 @@ function getJumuiyaByKandaId($kandaId)
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body>
+<body class="body2">
 
     <div class="container">
         <div class="card">
